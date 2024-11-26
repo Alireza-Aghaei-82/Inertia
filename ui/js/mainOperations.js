@@ -140,6 +140,10 @@ function redo()
 
     let move = root.gameHistory.moves[++root.gameHistory.movesIndex];
     root.movementDir = move.direction;
+
+    if(hintArrow.visible)
+        hintArrow.visible = false;
+
     gameModel.moveBall(move.direction);
 }
 
