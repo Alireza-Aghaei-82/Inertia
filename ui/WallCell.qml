@@ -16,7 +16,7 @@ Rectangle
     Image
     {
         anchors.fill: parent
-        source: "qrc:/build/wall.png"
+        source: "qrc:/resources/images/wall.png"
         smooth: isSmooth
         antialiasing: antialiasingEnabled
     }

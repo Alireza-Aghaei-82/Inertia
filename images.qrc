@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>build/exploded.png</file>
-        <file>build/wall.png</file>
-        <file>build/hintArrow.png</file>
-        <file>build/mine.png</file>
+        <file>resources/images/exploded.png</file>
+        <file>resources/images/hintArrow.png</file>
+        <file>resources/images/mine.png</file>
+        <file>resources/images/wall.png</file>
     </qresource>
 </RCC>

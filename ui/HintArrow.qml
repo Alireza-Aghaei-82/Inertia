@@ -2,7 +2,7 @@ import QtQuick
 
 Image
 {
-    source: "qrc:/build/hintArrow.png"
+    source: "qrc:/resources/images/hintArrow.png"
     antialiasing: true
     smooth: true
 }

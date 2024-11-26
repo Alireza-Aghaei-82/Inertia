@@ -13,7 +13,7 @@ Rectangle
     {
         anchors.fill: parent
         anchors.margins: 2
-        source: "qrc:/build/exploded.png"
+        source: "qrc:/resources/images/exploded.png"
         smooth: isSmooth
         antialiasing: antialiasingEnabled
     }

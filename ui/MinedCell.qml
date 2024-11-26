@@ -19,7 +19,7 @@ Rectangle
 
         anchors.fill: parent
         anchors.margins: 5
-        source: "qrc:/build/mine.png"
+        source: "qrc:/resources/images/mine.png"
         smooth: isSmooth
         antialiasing: antialiasingEnabled
     }
