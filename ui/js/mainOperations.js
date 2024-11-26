@@ -163,6 +163,8 @@ function saveGame(filePath)
     content += "#";
     content += gameModel.stuckAreaGemsToWrite();
     content += "#";
+    content += gameModel.initialCellValuesToWrite();
+    content += "#";
     content += gameModel.cellValuesToWrite();
 
     fileIO.setFileContent(content);
@@ -185,7 +187,8 @@ function loadGame(filePath)
                             root.ballPos,
                             parts[1],
                             parts[2],
-                            parts[3]);
+                            parts[3],
+                            parts[4]);
 }
 
 function setParams()
@@ -219,6 +222,7 @@ function resetParams()
     root.gameOver = false;
     root.gameCompleted = false;
     ball.initialMove = true;
+    hintArrow.visible = false;
 }
 
 function announceBallPos(ballPosition)
