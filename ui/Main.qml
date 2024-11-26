@@ -213,10 +213,7 @@ ApplicationWindow
                         "Inertia Game files (*.in)"
                      ]
 
-        onAccepted:
-        {
-            MainOperations.loadGame(fileOpenDialog.file)
-        }
+        onAccepted: MainOperations.loadGame(fileOpenDialog.file)
     }
 
     Labs.FileDialog

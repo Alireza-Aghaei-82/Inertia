@@ -159,12 +159,14 @@ function saveGame(filePath)
 
     let content = JSON.stringify(root.gameHistory);
     content += "#";
-
+    content += gameModel.stuckAreaToWrite();
+    content += "#";
+    content += gameModel.stuckAreaGemsToWrite();
+    content += "#";
     content += gameModel.cellValuesToWrite();
 
     fileIO.setFileContent(content);
-
-    fileIO.writeToFile();
+    fileIO.writeToFile(true);
 }
 
 function loadGame(filePath)
@@ -181,7 +183,9 @@ function loadGame(filePath)
     gameModel.loadSavedGame(root.rowsCount,
                             root.columnsCount,
                             root.ballPos,
-                            parts[1]);
+                            parts[1],
+                            parts[2],
+                            parts[3]);
 }
 
 function setParams()
