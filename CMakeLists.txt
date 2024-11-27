@@ -36,7 +36,11 @@ qt_add_qml_module(appInertia
                   ui/js/mainOperations.js
 
                   RESOURCES
-                  images.qrc)
+                  images.qrc
+
+                  SOURCES
+                  games-data-path.hpp
+                  games-data-path.cpp)
 
 
 set_target_properties(appInertia PROPERTIES

@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQml
 import Qt.labs.platform as Labs
 
+import Inertia
 import MyModules.Inertia.Model 1.0
 import MyModules.IO.TextualFileIO
 
@@ -136,15 +137,17 @@ ApplicationWindow
         {
             title: qsTr("&Type")
 
-            /*Action
+            Action
             {
-                text: qsTr("Generate new game")
-                checkable: true
+                text: qsTr("&8x8")
 
-                onToggled: root.generateNewGame = !root.generateNewGame
+                onTriggered:
+                {
+                    root.rowsCount = 8;
+                    root.columnsCount = 8;
+                    MainOperations.newGame();
+                }
             }
-
-            MenuSeparator{}*/
 
             Action
             {
@@ -154,6 +157,18 @@ ApplicationWindow
                 {
                     root.rowsCount = 10;
                     root.columnsCount = 10;
+                    MainOperations.newGame();
+                }
+            }
+
+            Action
+            {
+                text: qsTr("1&2x12")
+
+                onTriggered:
+                {
+                    root.rowsCount = 12;
+                    root.columnsCount = 12;
                     MainOperations.newGame();
                 }
             }
@@ -430,7 +445,9 @@ ApplicationWindow
     {
         id: stateMaintainer
         model: gameModel
+        gamesDataFilesPath: GamesDataPath.path
     }
+
 
     TextualFileIO
     {
